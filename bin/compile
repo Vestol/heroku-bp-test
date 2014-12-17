@@ -18,6 +18,7 @@ function indent() {
 echo "PWD: `pwd`" 
 
 ls `pwd`
+ls bin/ | indent
 
 cd $BUILD_DIR
 
