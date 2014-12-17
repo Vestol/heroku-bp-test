@@ -17,10 +17,10 @@ function indent() {
 
 cd $BUILD_DIR
 
-echo "-----> Build dir"
+echo "-----> Build dir: ${BUILD_DIR}"
 ls $BUILD_DIR | indent
 
-echo "-----> Cache dir"
+echo "-----> Cache dir ${CACHE_DIR}"
 ls $CACHE_DIR | indent
 
 
