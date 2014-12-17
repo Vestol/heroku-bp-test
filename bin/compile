@@ -15,10 +15,7 @@ function indent() {
   esac
 }
 
-echo "PWD: `pwd`" 
-
-ls `pwd`
-ls bin/ | indent
+echo dirname $0
 
 cd $BUILD_DIR
 
