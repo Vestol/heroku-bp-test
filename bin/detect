@@ -9,6 +9,8 @@
 
 if [ -f $1/application.c ]; then
   echo "Found e_ Application" && exit 0
+else
+  echo "application.c file missing" && exit 1
 fi
 
 exit 1
