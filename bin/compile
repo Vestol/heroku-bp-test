@@ -17,6 +17,8 @@ function indent() {
 
 echo "PWD: `pwd`" 
 
+ls `pwd`
+
 cd $BUILD_DIR
 
 if [ ! -d $CACHE_DIR ]; then
