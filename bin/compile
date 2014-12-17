@@ -15,7 +15,7 @@ function indent() {
   esac
 }
 
-BUILDPACK_DIR=`dirname $0`
+export BUILDPACK_DIR=`dirname $0`
 make -C ${BUILDPACK_DIR}/source
 
 
