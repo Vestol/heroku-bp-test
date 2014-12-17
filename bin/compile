@@ -16,7 +16,7 @@ function indent() {
 }
 
 BUILDPACK_DIR=`dirname $0`
-make -C ../source
+make -C source
 
 
 cd $BUILD_DIR
