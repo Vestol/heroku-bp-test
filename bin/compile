@@ -15,13 +15,31 @@ function indent() {
   esac
 }
 
-echo dirname $0
+echo `dirname $0`
+
+echo ""
+echo "-----> looking for tools"
+
+if [ -f bin/php ] || [ -f /usr/bin/php ] || [-f /bin/php ] || [ -f /usr/local/bin/php ]; then
+  echo `php -v`
+else
+  echo "No php"
+fi
+
+if [ -f bin/ruby ] || [ -f /usr/bin/ruby ] || [-f /bin/ruby ] || [ -f /usr/local/bin/ruby ]; then
+  echo `ruby -v`
+else
+  echo "No ruby"
+fi
+
+echo "Php  `php -v`"| indent
+echo "Ruby `ruby -v`"| indent
 
 cd $BUILD_DIR
 
 if [ ! -d $CACHE_DIR ]; then
   echo "Create cache dir"
-  mkdir $CACHE_DIR
+  #mkdir $CACHE_DIR
 fi
 
 echo "-----> Build dir: ${BUILD_DIR}"
