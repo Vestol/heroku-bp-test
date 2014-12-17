@@ -15,14 +15,8 @@ function indent() {
   esac
 }
 
-echo ""
-echo "-----> environment"
-
-printenv
-
-echo
-
 BUILDPACK_DIR=`dirname $0`
+make -c ../source
 
 
 cd $BUILD_DIR
