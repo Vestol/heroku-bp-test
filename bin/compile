@@ -19,16 +19,16 @@ echo "PWD: `pwd`"
 
 cd $BUILD_DIR
 
+if [ ! -d $CACHE_DIR ]; then
+  echo "Create cache dir"
+  mkdir $CACHE_DIR
+fi
+
 echo "-----> Build dir: ${BUILD_DIR}"
 ls $BUILD_DIR | indent
 
 echo "-----> Cache dir ${CACHE_DIR}"
 ls $CACHE_DIR | indent
-
-if [ ! -d $CACHE_DIR ]; then
-  echo "Create cache dir"
-  mkdir $CACHE_DIR
-fi
 
 
 # configure
