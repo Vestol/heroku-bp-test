@@ -4,7 +4,7 @@ cat <<EOF
 ---
 config_vars:
   PATH: /app/.go/bin:/usr/local/bin:/usr/bin:/bin
-  PRODUCTION: 1
+  E_ENVIRONMENT: 1
 default_process_types:
-  web: e -eproduction -p $PORT
+  web: e -eproduction -p$PORT
 EOF
