@@ -6,5 +6,5 @@ config_vars:
   PATH: /app/.go/bin:/usr/local/bin:/usr/bin:/bin
   E_ENVIRONMENT: 1
 default_process_types:
-  web: ./application -eproduction -p$PORT
+  web: ./application -p{$PORT} -eproduction
 EOF
