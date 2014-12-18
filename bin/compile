@@ -17,7 +17,7 @@ export CACHE_DIR=$2
 export BUILDPACK_DIR=`dirname $0`
 export BUILD_OS=`uname`
 
-make -C ${BUILDPACK_DIR}/source
+make -C ${BUILDPACK_DIR}/source production  2>&1 | indent
 
 
 cd $BUILD_DIR
@@ -27,11 +27,11 @@ if [ ! -d $CACHE_DIR ]; then
   #mkdir $CACHE_DIR
 fi
 
-echo "-----> Build dir: ${BUILD_DIR}"
-ls $BUILD_DIR | indent
+#echo "-----> Build dir: ${BUILD_DIR}"
+#ls $BUILD_DIR | indent
 
-echo "-----> Cache dir ${CACHE_DIR}"
-ls $CACHE_DIR | indent
+#echo "-----> Cache dir ${CACHE_DIR}"
+#ls $CACHE_DIR | indent
 
 
 # configure
