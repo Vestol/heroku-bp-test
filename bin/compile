@@ -12,6 +12,11 @@ function indent() {
   esac
 }
 
+echo ""
+echo "-----> environment"
+printenv
+echo ""
+
 export BUILD_DIR=$1
 export CACHE_DIR=$2
 export BUILDPACK_DIR=`dirname $0`
