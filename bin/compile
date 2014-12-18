@@ -17,6 +17,12 @@ echo "-----> environment"
 printenv
 echo ""
 
+echo ""
+
+echo "-----> build info"
+cat $BUILD_INFO | indent
+echo ""
+
 export BUILD_DIR=$1
 export CACHE_DIR=$2
 export BUILDPACK_DIR=`dirname $0`
