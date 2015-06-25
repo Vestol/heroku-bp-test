@@ -55,4 +55,7 @@ fi
 echo "-----> Compiling with Make"
 make 2>&1 | indent
 
+echo "--- Environment ---"
 printenv
+echo "--- BUILD_INFO ---"
+cat $BUILD_INFO
